@@ -1,0 +1,375 @@
+:root{
+    --red:rgba(143,0,0,0.87)
+}
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    text-transform: none;
+}
+
+html{
+    font-size: 83%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+section{
+    padding: 2rem 10%;
+}
+.heading{
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0.7rem ;
+    color: #333;
+    background-color: rgba(206, 136, 178, 0.1);
+}
+.heading span{
+    color: var(--red);
+}
+.btn{
+    display:inline-block;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color:#333;
+    padding: 0.7rem 0.5rem;
+    border-radius: 5rem;
+    margin-top: 1.5rem;
+}
+.btn:hover{
+    background-color: var(--red);
+}
+
+header{
+   position: fixed;
+   background-color: #fff;
+   top: 0;
+   right: 0;
+   left: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 2rem 10%;
+   z-index: 1000;
+   box-shadow: 0 .4rem 1.5rem rgba(0,0,0,.1);
+
+}
+
+header .logo{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #333;
+}
+
+header .logo span{
+    color: var(--red);
+}
+
+header .navbar a{
+    font-size: 1.5rem;
+    color: #666;
+    padding: 0.7rem;
+}
+header .navbar a:hover{
+    color: var(--red);
+}
+header .icons a{
+    font-size: 1.5rem;
+    color: #666;
+    margin-left: 1rem;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/images/292112.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.home .content{
+    max-width: 50rem;
+}
+
+.content h1{
+   font-size: 4rem;
+   color: var(--red);
+}
+
+.home .content span{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.home{
+    background-image: url(/images/292112.jpg);
+}
+.content p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+
+}
+
+.about .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about .row .video-container img{
+    height: 100%;
+    width: 100%;
+    border: 0.5rem solid white;
+    border-radius: 2rem;
+    object-fit:cover ;
+    box-shadow: 0 0 1rem black;
+}
+
+.about .row .video-container h3{
+    font-size: 2rem;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) ;
+    text-align: center;
+    width: 100%;
+    padding: 0.9rem 2rem ;
+    mix-blend-mode: screen;   
+}
+.about .row .content{
+    flex: 1 1 40rem;
+}
+.about .row .content h3{
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.about .row .content p{
+    color: #999;
+}
+
+.icons-container{
+    background-color: #eee;
+    margin: 5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+}
+.icons-container .icons{
+    flex: 1 1 23rem;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid black;
+    border-radius: 3rem;
+}
+.icons-container .icons img{
+    height: 5rem;
+    margin-right: 2rem;
+}
+.icons-container .icons h3{
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    color: #333;
+}
+.icons-container .icons span{
+    color: #555;
+}
+
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.products .box-container .box{
+    flex: 1 1 25rem;
+    border: 0.5rem solid rgba(0,0,0,.1);
+    box-shadow: 0 0 1rem rgba(0,0,0,.1);
+    position: relative;
+}
+.products .box-container .box .discount{
+    
+    position: absolute;
+    top: 1rem; left:1rem ;
+    padding: .6rem 1rem;
+    z-index: 1;
+    font-size: 1.7rem;
+    color: var(--red);
+    background-color: rgb(237, 234, 235);
+    border-radius: 1rem;
+}
+
+.products .box-container .box .image{
+   position: relative;
+   padding-top: 1.5rem ;
+   overflow: hidden ;
+   text-align: center;
+}
+
+.products .box-container .box .image img{
+    height: 25rem;
+    
+}
+
+.products .box-container .box .icons{
+    position: absolute;
+    bottom: -5rem; right: 0; left: 0;
+    display: flex;
+}
+.products .box-container .box:hover  .icons{
+    bottom: 0;
+}
+
+.products .box-container .box  .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.5rem;
+    width: 50%;
+    background-color: var(--red) ;
+    color: #fff;
+}
+
+.products .box-container .box  .icons .cartbtn{
+    border-left:1rem solid #fff7;
+    border-right: 1rem solid #fff7;
+    width: 100%;
+}
+.products .box-container .box  .icons a:hover{
+    background-color:#666;
+}
+.products .box-container .box .content {
+    padding: 2rem;
+    text-align: center;
+}
+.products .box-container .box .content h3{
+    font-size: 2.1rem;
+    color: #333;
+}
+.products .box-container .box .content .price{
+    font-size: 2rem;
+    color: var(--red);
+    font-weight: bolder;
+    margin-top: 1rem;
+}
+.products .box-container .box .content .price span{
+    font-size: 1.1rem;
+    text-decoration: line-through;
+    color: #333;
+    font-weight: lighter;
+    padding-left: 0.3rem;
+}
+
+.reviews .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.reviews .box-container .box{
+    flex: 1 1 30rem;
+    position: relative;
+    border: 0.7rem solid rgba(0,0,0,.1);
+    box-shadow: 0 0 1rem rgba(0,0,0,.1);
+    border-radius: 2rem;
+}
+.reviews .box-container .box .fa-quote-right{
+    position: absolute;
+    bottom: 3rem; right: 3rem;
+    font-size: 3rem;
+    color: #666;
+}
+.reviews .box-container .box .stars{
+   margin: 1.2rem 1rem;
+}
+.reviews .box-container .box .stars i{
+    color: var(--red);
+    font-size: 1.5rem;
+    
+}
+.reviews .box-container .box .stars .not{
+    color: #999;
+}
+.reviews .box-container .box p{
+    font-size: 1.5rem;
+    color: #777;
+    line-height: 1.5;
+    padding: 2rem;
+}
+.reviews .box-container .box .user{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.reviews .box-container .box .user img{
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
+}
+.reviews .box-container .box .user h3{
+    font-size: 2rem;
+    color: #333;
+}
+.reviews .box-container .box .user span{
+    font-size: 1.5rem;
+    color: #999;
+}
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    
+}
+.footer .box-container .box{
+    flex: 1 1 25rem;
+
+}
+.footer .box-container .box h1{
+    font-size: 2.3rem;
+    color: #333;
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    font-size: 1.5rem;
+    display: block;
+    color: #555;
+    padding: 1rem 0;
+   
+}
+.footer .box-container .box a:hover{
+    color: var(--red);
+    text-decoration: underline;
+}
+
+.footer .box-container .box img{
+  margin: 1rem;
+}
+.footer .credit{
+    font-size: 2rem ;
+    color: #333;
+    border-top: 0.1rem rgba(0,0,0,.1);
+    text-align: center ;
+    margin-top: 1.4rem;
+    padding:1.4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 6rem;
+}
+.footer span{
+    color: var(--red);
+}
